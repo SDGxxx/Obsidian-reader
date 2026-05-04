@@ -3,6 +3,14 @@
 	"version": "0.0.1",
 	"private": true,
 	"description": "AI-assisted reading tool for Obsidian",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SDGxxx/Obsidian-reader.git"
+	},
+	"bugs": {
+		"url": "https://github.com/SDGxxx/Obsidian-reader/issues"
+	},
+	"homepage": "https://github.com/SDGxxx/Obsidian-reader#readme",
 	"scripts": {
 		"build": "node esbuild.config.mjs production",
 		"dev": "node esbuild.config.mjs",

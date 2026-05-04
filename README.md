@@ -1,5 +1,9 @@
 # Obsidian Reader
 
+[![CI](https://github.com/SDGxxx/Obsidian-reader/actions/workflows/ci.yml/badge.svg)](https://github.com/SDGxxx/Obsidian-reader/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/SDGxxx/Obsidian-reader?include_prereleases)](https://github.com/SDGxxx/Obsidian-reader/releases)
+[![Obsidian](https://img.shields.io/badge/Obsidian-plugin-7c3aed)](https://obsidian.md/)
+
 > AI 辅助阅读工具——陪你读，而不是替你读。
 
 ## 这是什么
@@ -38,7 +42,26 @@ Obsidian Reader 是一个 Obsidian 插件，帮助你在阅读长文时**压缩�
 
 ## 安装
 
-1. 在项目根目录执行 `npm install && npm run build`
+### 从 Release 安装
+
+1. 打开 [Releases](https://github.com/SDGxxx/Obsidian-reader/releases)。
+2. 下载最新的 `obsidian-reader-*.zip`。
+3. 解压到你的 Obsidian vault：
+   ```
+   <你的vault>/.obsidian/plugins/obsidian-reader/
+   ├── main.js
+   ├── manifest.json
+   └── styles.css
+   ```
+4. 打开 Obsidian → 设置 → 第三方插件 → 关闭安全模式 → 启用 Obsidian Reader。
+
+### 从源码构建
+
+1. 在项目根目录执行：
+   ```bash
+   npm install
+   npm run build
+   ```
 2. 将 `main.js`、`manifest.json` 和 `styles.css` 复制到你的 Obsidian vault 中：
    ```
    <你的vault>/.obsidian/plugins/obsidian-reader/
@@ -46,7 +69,7 @@ Obsidian Reader 是一个 Obsidian 插件，帮助你在阅读长文时**压缩�
    ├── manifest.json
    └── styles.css
    ```
-3. 打开 Obsidian → 设置 → 第三方插件 → 关闭安全模式 → 启用 Obsidian Reader
+3. 打开 Obsidian → 设置 → 第三方插件 → 关闭安全模式 → 启用 Obsidian Reader。
 
 ## 配置
 
@@ -148,3 +171,33 @@ Obsidian Reader 是一个 Obsidian 插件，帮助你在阅读长文时**压缩�
 
 **Q: 使用中转站时报错？**
 确认 Auth Mode 选择了"Auth Token"，Base URL 填写正确，且中转站支持 Anthropic Messages API 格式（不支持 OpenAI 兼容接口）。
+
+## 开发
+
+```bash
+npm install
+npm run typecheck
+npm test
+npm run build
+```
+
+主要目录：
+
+- `src/core/ai/`：AI 调用、解析和兜底逻辑
+- `src/core/parser/`：段落和章节识别
+- `src/commands/`：Obsidian 命令编排
+- `src/ui/`：弹窗和交互
+- `prompts/`：所有模型提示词
+- `tests/`：单元测试和命令/UI 回归测试
+
+## 发布
+
+创建形如 `v0.0.1` 的 tag 后，GitHub Actions 会自动构建并生成 release zip，包含：
+
+- `main.js`
+- `manifest.json`
+- `styles.css`
+
+## 许可证
+
+暂未选择开源许可证。公开使用、二次分发或商用前请先确认许可证策略。

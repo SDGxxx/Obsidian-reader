@@ -6,6 +6,7 @@ data.json
 .env.*
 *.log
 *.tmp
+*.zip
 dist/
 coverage/
 *.map
