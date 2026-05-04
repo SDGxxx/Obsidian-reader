@@ -1,0 +1,1 @@
+export const MAX_READING_NOTE_INPUT_LENGTH = 30000;

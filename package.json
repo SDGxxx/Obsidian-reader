@@ -1,0 +1,25 @@
+{
+	"name": "obsidian-reader",
+	"version": "0.0.1",
+	"private": true,
+	"description": "AI-assisted reading tool for Obsidian",
+	"scripts": {
+		"build": "node esbuild.config.mjs production",
+		"dev": "node esbuild.config.mjs",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"test:watch": "vitest"
+	},
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"builtin-modules": "^3.3.0",
+		"esbuild": "^0.21.0",
+		"jsdom": "^29.1.1",
+		"obsidian": "latest",
+		"typescript": "~5.4.0",
+		"vitest": "^1.6.0"
+	},
+	"dependencies": {
+		"@anthropic-ai/sdk": "^0.88.0"
+	}
+}

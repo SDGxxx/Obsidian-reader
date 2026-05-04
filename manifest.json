@@ -1,0 +1,9 @@
+{
+	"id": "obsidian-reader",
+	"name": "Obsidian Reader",
+	"version": "0.0.1",
+	"minAppVersion": "0.15.0",
+	"description": "AI-assisted reading tool: read with you, not for you.",
+	"author": "Obsidian Reader Team",
+	"isDesktopOnly": false
+}

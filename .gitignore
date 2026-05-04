@@ -1,0 +1,11 @@
+node_modules/
+.claude/
+.obsidian/
+data.json
+.env
+.env.*
+*.log
+*.tmp
+dist/
+coverage/
+*.map
